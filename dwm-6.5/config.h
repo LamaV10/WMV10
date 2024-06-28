@@ -83,6 +83,9 @@ static const char *play3pause[] = { "/usr/bin/playerctl", "play3pause", "toggle"
 static const char *upbright[] = {"/usr/bin/brightnessctl", "set", "+5%", NULL};
 static const char *downbright[] = {"/usr/bin/brightnessctl", "set", "5%-", NULL};
 
+//sleep mode
+static const char *suspend[] = { "/usr/bin/systemctl", "suspend", NULL };
+
 
 
 static const Key keys[] = {
@@ -100,6 +103,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_F8,     spawn, 	       {.v = play3pause} },
 	{ MODKEY,                       XK_F6,     spawn, 	       {.v = upbright } },
 	{ MODKEY,                       XK_F5,     spawn, 	       {.v = downbright } },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = suspend } },
 	{ MODKEY,                       XK_o,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
