@@ -1,6 +1,6 @@
 My WM setups. 
 
-#####################################################################
+
 You can find the picom.conf under this directory: /etc/xdg/picom.conf
 
 
