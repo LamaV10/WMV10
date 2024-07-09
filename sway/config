@@ -32,8 +32,6 @@ input * {
 #waybar
 #exec --no-startup-id waybar
 
-#autotiling
-exec --no-startup-id autotiling
 
 #daktheme
 set $gnome-schema org.gnome.desktop.interface
@@ -42,7 +40,7 @@ exec_always
 
 {
 
-gsettings set $gnome-schema gtk-theme Magna-Dark-GTK
+gsettings set $gnome-schema "Sweet"
 
 #gsettings set $gnome-schema icon-theme "Noir-Gently-White-Blue-Dark-Icons"
 gsettings set $gnome-schema icon-theme "Adwaita"
@@ -264,13 +262,14 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-    status_command while ~/.config/sway/status.sh; do sleep 1; done
+    #status_command while ~/.config/sway/status.sh; do sleep 1; done
+    status_command i3status
 
     colors {
-        statusline #C784FF
+        statusline #E1FF00
         background #00000099
         inactive_workspace #32323200 #32323200 #5c5c5c
-        focused_workspace #C784FF #C784FF #ffffff
+        focused_workspace #B500FF #B500FF #ffffff
 }
 }
 
