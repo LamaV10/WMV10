@@ -33,22 +33,6 @@ input * {
 #exec --no-startup-id waybar
 
 
-#daktheme
-set $gnome-schema org.gnome.desktop.interface
-
-exec_always
-
-{
-
-gsettings set $gnome-schema "Sweet"
-
-#gsettings set $gnome-schema icon-theme "Noir-Gently-White-Blue-Dark-Icons"
-gsettings set $gnome-schema icon-theme "Adwaita"
-
-}
-
-
-#
 # Default wallpaper
 output * bg /home/marcel/Pictures/Wallpaper/Horizontal/forrestwallpaper.png fill
 #
