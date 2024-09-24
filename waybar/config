@@ -1,6 +1,6 @@
 {
-    "layer": "bottom",
-    "position": "top",
+    "layer": "top",
+    "position": "bottom",
     "height": 23,
     "width": 1350,
     "margin": "3, 0, 2, 0",
