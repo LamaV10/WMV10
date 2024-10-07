@@ -13,7 +13,6 @@ while true; do
 done &
 
 #st transparency
-#xcompmgr -c &
 picom &
 
 exec dwm
