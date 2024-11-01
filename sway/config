@@ -9,19 +9,19 @@
 # Logo key. Use Mod1 for Alt.
 set $mod alt
 # Home row direction keys, like vim
-set $left j
-set $down k
-set $up i
+set $left h
+set $down j
+set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 
 #keyboard layout
 input * {
-        xkb_layout "de"
+            xkb_layout "de"
        #xkb_variant "de"
 }
 
@@ -30,17 +30,21 @@ input * {
 
 ### Output configuratioon
 #waybar
-#exec --no-startup-id waybar
+exec --no-startup-id waybar
 
 
 # Default wallpaper
-output * bg /home/marcel/Pictures/Wallpaper/Horizontal/forrestwallpaper.png fill
+output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/911gt3.jpg fill
+output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Vertical/r34.jpg fill
 #
 # Example configuration:
 #
-    output DP-3 resolution 2560x1440@143.973hz position 0,650
-    output HDMI-A-1 transform 270 resolution 2560x1440@60.032hz position 2560,0
-#
+   output DP-3 resolution 2560x1440@143.973hz position 0,650
+   output HDMI-A-1 transform 270 resolution 2560x1440@60.032hz position 2560,0
+
+   workspace 1 output DP-3
+   workspace 2 output HDMI-A-1
+# 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
@@ -87,12 +91,9 @@ output * bg /home/marcel/Pictures/Wallpaper/Horizontal/forrestwallpaper.png fill
     bindsym shift+Print exec sway-interactive-screenshot
 
     #App shortcuts
-    bindsym $mod+b exec --no-startup-id thorium-browser
+    bindsym $mod+b exec --no-startup-id firefox 
     #thunar
     bindsym $mod+e exec --no-startup-id thunar
-
-    #vscodium
-    bindsym $mod+o exec --no-startup-id vscodium
 
     #spotify
     bindsym $mod+m exec --no-startup-id spotify
@@ -239,24 +240,24 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-   position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-    #status_command while ~/.config/sway/status.sh; do sleep 1; done
-    status_command i3status
-
-    colors {
-        statusline #E1FF00
-        background #00000099
-        inactive_workspace #32323200 #32323200 #5c5c5c
-        focused_workspace #B500FF #B500FF #ffffff
-}
-}
-
+# # Read `man 5 sway-bar` for more information about this section.
+# bar {
+#    position bottom 
+#
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#     #status_command while ~/.config/sway/status.sh; do sleep 1; done
+#     status_command i3status
+#
+#     colors {
+#         statusline #E1FF00
+#         background #00000099
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#         focused_workspace #B500FF #B500FF #ffffff
+# }
+# }
+#
 # Add gaps in between all application windows:
 gaps inner 5
 gaps outer 3
