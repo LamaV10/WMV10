@@ -34,7 +34,7 @@ exec --no-startup-id waybar
 
 
 # Default wallpaper
-output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/911gt3.jpg fill
+output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
 output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Vertical/r34.jpg fill
 #
 # Example configuration:
@@ -85,7 +85,7 @@ output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Vertical/r34.jpg fill
     bindsym $mod+q kill
 
     # application launcher
-    bindsym $mod+space exec --no-startup-id dmenu_run
+    bindsym $mod+space exec --no-startup-id rofi -show run 
 
     #screenshot
     bindsym shift+Print exec sway-interactive-screenshot
