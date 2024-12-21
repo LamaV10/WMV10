@@ -66,10 +66,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browser[]  = { "firefox", NULL };
+static const char *browser[]  = { "qutebrowser", NULL };
 static const char *spotify[]  = { "spotify", NULL };
 static const char *fileman[]  = { "thunar", NULL };
 static const char *stk[]      = { "supertuxkart", NULL };
+static const char *webcam[]      = { "webcamoid", NULL };
+
+static const char *screenshot[] = { "/usr/bin/scrot", NULL};
 
 //volume
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
@@ -98,12 +101,17 @@ static const Key keys[] = {
 	{ MODKEY,	                      XK_b,	     spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_s,	     spawn,          {.v = stk } },
 	{ MODKEY,	                      XK_m,	     spawn,          {.v = spotify } },
+	{ MODKEY,	                      XK_F6,	   spawn,          {.v = webcam} },
+
+	{ MODKEY,	                      XK_F7,	  spawn,          {.v = screenshot} },
+
 	{ MODKEY,                       XK_F1,     spawn, 	       {.v = downvol } },
 	{ MODKEY,                       XK_Escape, spawn,      	   {.v = mutevol } },
 	{ MODKEY,                       XK_F2,     spawn, 	       {.v = upvol   } },
 	{ MODKEY,                       XK_F12,    spawn, 	       {.v = next    } },
 	{ MODKEY,                       XK_F10,    spawn, 	       {.v = previous} },
 	{ MODKEY,                       XK_F11,    spawn, 	       {.v = play3pause} },
+
 	{ MODKEY,                       XK_F9,     spawn, 	       {.v = upbright } },
 	{ MODKEY,                       XK_F8,     spawn, 	       {.v = downbright } },
 	{ MODKEY,                       XK_F4,     spawn,          {.v = suspend } },
