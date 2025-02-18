@@ -20,9 +20,11 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 
 #keyboard layout
-input * {
-            xkb_layout "de"
-       #xkb_variant "de"
+input "type:keyboard" {
+    xkb_layout de
+    xkb_variant neo_qwertz 
+}
+
 }
 
 
@@ -34,16 +36,17 @@ exec --no-startup-id waybar
 
 
 # Default wallpaper
-output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
-output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Vertical/r34.jpg fill
+output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/bmw-e30-m3-evo-dtm-t7-2560x1440-3464458148.jpg fill
+output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
 #
 # Example configuration:
 #
-   output DP-3 resolution 2560x1440@143.973hz position 0,650
-   output HDMI-A-1 transform 270 resolution 2560x1440@60.032hz position 2560,0
+   output DP-3 resolution 2560x1440@143.973hz position 0,1440
+   # output HDMI-A-1 transform 270 resolution 2560x1440@60.032hz position 2560,0
+   output HDMI-A-1 resolution 2560x1440@60.032hz position 0,0
 
    workspace 1 output DP-3
-   workspace 2 output HDMI-A-1
+   workspace 9 output HDMI-A-1
 # 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
@@ -91,9 +94,9 @@ output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Vertical/r34.jpg fill
     bindsym shift+Print exec sway-interactive-screenshot
 
     #App shortcuts
-    bindsym $mod+b exec --no-startup-id firefox 
-    #thunar
-    bindsym $mod+e exec --no-startup-id thunar
+    bindsym $mod+b exec --no-startup-id qutebrowser 
+    #fileman
+    bindsym $mod+e exec --no-startup-id pcmanfm 
 
     #spotify
     bindsym $mod+m exec --no-startup-id spotify
