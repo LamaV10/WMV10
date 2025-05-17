@@ -1,6 +1,9 @@
 # colorize bash
 alias ls='ls --color=auto'
 
+# use trash instead of rm
+alias rm='trash'
+
 # bash complition case insensitiv
 bind -s 'set completion-ignore-case on'
 
