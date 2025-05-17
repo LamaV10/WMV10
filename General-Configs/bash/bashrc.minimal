@@ -1,4 +1,4 @@
-# colorize bash
+# colorize ls
 alias ls='ls --color=auto'
 
 # use trash instead of rm
@@ -12,6 +12,8 @@ bind 'set show-all-if-ambiguous on'
 
 # color theme
 export PS1="{\[\e[33m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]:\W_\$?}$ "
+
+fastfetch
 
 # initalize
 eval "$(zoxide init bash)"
