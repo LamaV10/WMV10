@@ -7,4 +7,6 @@ bind -s 'set completion-ignore-case on'
 # show possebilites when tab is pressed
 bind 'set show-all-if-ambiguous on'
 
+# initalize
 eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
