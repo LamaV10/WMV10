@@ -13,6 +13,7 @@ OSH_THEME="axin"
 
 eval "$(zoxide init bash)"
 fastfetch
+alias sudo='doas'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
