@@ -4,6 +4,10 @@ alias ls='ls --color=auto'
 # use trash instead of rm
 alias rm='trash'
 
+# doas instead of sudo
+alias sudo='doas'
+alias yay='yay --sudo /usr/bin/doas'
+
 # bash complition case insensitiv
 bind -s 'set completion-ignore-case on'
 
