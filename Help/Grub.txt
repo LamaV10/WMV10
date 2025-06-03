@@ -1,0 +1,6 @@
+Make grub config:
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+Install grub:
+Directory has to bee boot partition.
+sudo grub-install /dev/sda
