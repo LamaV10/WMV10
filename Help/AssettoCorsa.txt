@@ -1,0 +1,10 @@
+Playing AC via Steam.
+
+1. Downlaod the game 
+2. Switch to Proton 5.0-10 for the game (left click > properties > compability)
+3. Start the game (it's going to fail)
+4. Now switch to Proton GE (i tested it on 10-4) -> if not installed, do it via protonup-qt
+5. I needed to install .NET48 aswell (see steam messeges when starting it in the terminal) -> protontricks 244210 dotnet48
+6. Now it should run!
+
+Content Manager -> work in progress 
