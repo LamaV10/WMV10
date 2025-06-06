@@ -1,0 +1,26 @@
+Not enough swap could lead to crashing.
+
+Show swap:
+swapon --show
+
+Show how much is free:
+free -h
+
+Make 1G swap:
+sudo fallocate -l 1G /swapfile
+
+Start swap:
+sudo swapon /swapfile_extend_1GB
+
+Get swap in fstab (/etc/fstab):
+/swapfile_extend_1GB       none       swap    sw        0       0
+
+How to make swap bigger:
+    Turn it off firest:
+    sudo swapoff /swapfile
+    
+    Change size of the swapfile:
+    sudo fallocate -l 4G /swapfile
+
+    Turn it on again:
+    sudo swapon /swapfile
