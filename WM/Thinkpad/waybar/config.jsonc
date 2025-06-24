@@ -1,6 +1,7 @@
 {
   "layer": "top",
   "position": "top",
+  // "position": "bottom",
   "height": 20,
   "spacing": 2,
   "exclusive": true,
@@ -10,6 +11,7 @@
   "modules-left": ["custom/wmname","sway/workspaces","hyprland/workspaces","sway/mode","custom/separator", "custom/separator", "custom/recorder", "custom/audiorec"],
   "modules-center": ["mpris"],
   "modules-right": [
+    "backlight",
     "battery",
     "network",
     "cpu",
@@ -60,6 +62,10 @@
     "format": " {:%H:%M}",
   },
 
+  "backlight": {
+    "format": "󰍹 {percent}%",
+  },
+
   "battery": {
     "bat": "BAT1", // Akku-Gerätename (z. B. BAT0, BAT1 – je nach System)
     "interval": 30,
@@ -91,7 +97,7 @@
     "interval": 1,
   },
   "memory": {
-    "format": " {used:0.1f}Gi",
+    "format": "|-|-| {used:0.1f}Gi",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
