@@ -69,10 +69,16 @@
   "battery": {
     "bat": "BAT1", // Akku-Gerätename (z. B. BAT0, BAT1 – je nach System)
     "interval": 30,
-    "format": "{capacity}% ",
-    // "tooltip": true,
-    // "tooltip-format": "Kapazität: {capacity}%\nStatus: {status}",
-    // "on-click": "gnome-power-statistics" // Optional: Befehl beim Klick
+    "format": "{capacity}%",
+    "format-icons": [
+	"", // 51% - 100%
+	"", // 26% - 50%
+	"", // 25% - 11%
+	""  // 10% - 0%
+    ],
+    "format-alt": "{capacity}%",
+    "max-length": 50,
+    "tooltip": true,
   },
 
   "clock": {
