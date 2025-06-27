@@ -86,8 +86,10 @@
 	"", // 26% - 50%
 	""  // 51% - 100%
     ],
-    "format-alt": "{capacity}%",
-    "max-length": 50,
+    "states": {
+	"half": 50,
+	"critical": 10
+    },
     "tooltip": true,
   },
 

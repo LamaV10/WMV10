@@ -107,6 +107,14 @@ window#waybar.empty #window {
   color: #4bff42;
 }
 
+#battery.half{
+  color: #ffb700;
+}
+
+#battery.critical{
+  color: #ff5555;
+}
+
 #clock.simpleclock {
   color: #89b4fa;
 }
