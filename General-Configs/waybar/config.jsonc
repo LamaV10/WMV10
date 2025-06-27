@@ -1,6 +1,7 @@
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
+  // "position": "bottom",
   "height": 20,
   "spacing": 2,
   "exclusive": true,
@@ -10,6 +11,8 @@
   "modules-left": ["custom/wmname","sway/workspaces","hyprland/workspaces","sway/mode","custom/separator", "custom/separator", "custom/recorder", "custom/audiorec"],
   "modules-center": ["mpris"],
   "modules-right": [
+    "backlight",
+    "battery",
     "network",
     "cpu",
     "memory",
@@ -58,6 +61,20 @@
     "tooltip": false,
     "format": " {:%H:%M}",
   },
+
+  "backlight": {
+    "format": "󰍹 {percent}%",
+  },
+
+  "battery": {
+    "bat": "BAT1", // Akku-Gerätename (z. B. BAT0, BAT1 – je nach System)
+    "interval": 30,
+    "format": "{capacity}% ",
+    // "tooltip": true,
+    // "tooltip-format": "Kapazität: {capacity}%\nStatus: {status}",
+    // "on-click": "gnome-power-statistics" // Optional: Befehl beim Klick
+  },
+
   "clock": {
     "format": " {:L%a %d %b}",
     "calendar": {
@@ -80,8 +97,7 @@
     "interval": 1,
   },
   "memory": {
-    "format": " {used:0.1f}Gi",
-    #
+    "format": "|-|-| {used:0.1f}Gi",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

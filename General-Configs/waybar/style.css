@@ -2,7 +2,7 @@
   min-height: 0;
   min-width: 0;
   font-family: Lexend, "JetBrainsMono NFP";
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -45,6 +45,8 @@ window#waybar {
   color: #f38ba8;
 }
 
+#backlight,
+#battery,
 #network,
 #clock,
 #pulseaudio,
@@ -81,6 +83,14 @@ window#waybar.empty #window {
   background-color: transparent;
 }
 
+#backlight {
+  color: #94e2d5;
+}
+
+#network {
+  color: #ffffff;
+}
+
 #cpu {
   color: #94e2d5;
 }
@@ -91,6 +101,10 @@ window#waybar.empty #window {
 
 #clock {
   color: #74c7ec;
+}
+
+#battery{
+  color: #4bff42;
 }
 
 #clock.simpleclock {
