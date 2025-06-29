@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable WLAN Power Save on resume
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/iw dev wlan0 set power_save off
+
+[Install]
+WantedBy=suspend.target
