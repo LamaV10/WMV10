@@ -14,6 +14,8 @@ OSH_THEME="axin"
 eval "$(zoxide init bash)"
 fastfetch
 alias sudo='doas'
+alias rm='trash'
+export SUDO_EDITOR=nvim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -161,3 +163,4 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+export PATH=$PATH:~/.local/bin
