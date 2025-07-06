@@ -1,3 +1,4 @@
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -15,7 +16,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term kitty
+set $term ghostty 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 
@@ -30,11 +31,12 @@ input "type:keyboard" {
 
 ### Output configuratioon
 #waybar
-exec --no-startup-id waybar
+exec waybar
 
 
 # Default wallpaper
-output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/bmw-e30-m3-evo-dtm-t7-2560x1440-3464458148.jpg fill
+output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/jpg fill
+# output DP-3 bg /home/marcel/Pictures/Wallpaper/Horizontal/bmw-e30-m3-evo-dtm-t7-2560x1440-3464458148.jpg fill
 output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
 #
 # Example configuration:
@@ -92,25 +94,25 @@ output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
     bindsym shift+Print exec sway-interactive-screenshot
 
     #App shortcuts
-    bindsym $mod+b exec --no-startup-id qutebrowser 
+    bindsym $mod+b exec --no-startup-id brave 
     #fileman
     bindsym $mod+e exec --no-startup-id pcmanfm 
 
     #spotify
     bindsym $mod+m exec --no-startup-id spotify
 
+
     #multimedia
     # Use pactl to adjust volume in PulseAudio.
     set $refresh_i3status killall -SIGUSR1 i3status
-    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-    bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-    bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+    bindsym $mod+Shift+E exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+    bindsym $mod+Shift+D exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+    bindsym $mod+Shift+M exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
     # Media player controls
-    bindsym XF86AudioPlay exec playerctl play3pause
-    bindsym XF86AudioNext exec playerctl next
-    bindsym XF86AudioPrev exec playerctl previous
+    bindsym $mod+Shift+G exec playerctl play3pause
+    bindsym $mod+Shift+F exec playerctl next
+    bindsym $mod+Shift+S exec playerctl previous
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -124,7 +126,7 @@ output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+Escape exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
