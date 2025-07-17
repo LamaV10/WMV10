@@ -24,6 +24,7 @@
     "backlight",
     "battery",
     "network",
+    "temperature",
     "cpu",
     "memory",
     "pulseaudio",
@@ -92,6 +93,14 @@
     },
     "tooltip": true,
   },
+
+    "temperature": {
+	    // "thermal-zone": 2,
+	    // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	    // "critical-threshold": 80,
+	    // "format-critical": "{temperatureC}°C ",
+	    "format": "{temperatureC}°C "
+    },
 
   "clock": {
     "format": " {:L%a %d %b}",
