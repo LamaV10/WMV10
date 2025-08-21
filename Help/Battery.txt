@@ -1,5 +1,7 @@
 See which battery there is:
 upower --enumerate
+or 
+upower -e
 
 Copy path into upower -i:
 upower -i /org/freedesktop/UPower/devices/battery_BAT1
