@@ -1,0 +1,3 @@
+iwd as backend for NetworkManager:
+[device]
+wifi.backend=iwd

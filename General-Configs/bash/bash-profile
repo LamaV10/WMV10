@@ -1,0 +1,12 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && source ~/.bashrc
+
+if [ -n "$SSH_CONNECTION" ]  || [ -n "$SSH_CLIENT" ] ||  [ -n "$SSH_TTY" ]; then
+    return
+fi
+if [ -z "$WAYLAND_DISPLAY" ] && [ -z $DISPLAY ] ; then
+    exec sway
+fi
