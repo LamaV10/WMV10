@@ -24,7 +24,8 @@ export HISTFILESIZE=100000
 # setup sudoedit
 export SUDO_EDITOR=nvim
 
-fastfetch
+# update sys
+alias spsyu='sudo pacman -Syu'
 
 # initalize
 eval "$(zoxide init bash)"
