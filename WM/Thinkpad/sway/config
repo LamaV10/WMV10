@@ -112,7 +112,7 @@ output HDMI-A-1 bg /home/lama/Pictures/Wallpaper/greyRx7side.jpg fill
     bindsym $mod+Escape exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
     # Media player controls
-    bindsym $mod+F11 exec playerctl play3pause
+    bindsym $mod+F11 exec playerctl 'play-pause' 
     bindsym $mod+F12 exec playerctl next
     bindsym $mod+F10 exec playerctl previous
 
