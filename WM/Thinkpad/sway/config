@@ -40,9 +40,8 @@ output HDMI-A-1 bg /home/lama/Pictures/Wallpaper/greyRx7side.jpg fill
 # Example configuration:
 #
    # output DP-3 resolution 2560x1440@143.973hz position 0,1440
-   output eDP-1 resolution 1366x768@60.072hz position 0,0
    # output HDMI-A-1 transform 270 resolution 2560x1440@60.032hz position 2560,0
-   output HDMI-A-1 resolution 1920x1080@60.000hz position 1366,0
+   # output HDMI-A-1 resolution 1920x1080@60.000hz position 1366,0
 
    workspace 1 output eDP-1
    workspace 9 output HDMI-A-1
@@ -87,10 +86,10 @@ output HDMI-A-1 bg /home/lama/Pictures/Wallpaper/greyRx7side.jpg fill
     bindsym $mod+q kill
 
     # application launcher
-    bindsym $mod+space exec --no-startup-id rofi -show run 
+    bindsym $mod+space exec --no-startup-id fuzzel 
 
     #screenshot
-    bindsym shift+Print exec sway-interactive-screenshot
+    bindsym F7 exec sway-interactive-screenshot
 
     #App shortcuts
     bindsym $mod+b exec --no-startup-id brave 
@@ -98,23 +97,23 @@ output HDMI-A-1 bg /home/lama/Pictures/Wallpaper/greyRx7side.jpg fill
     bindsym $mod+e exec --no-startup-id pcmanfm 
 
     #spotify
-    bindsym $mod+m exec --no-startup-id spotify
+    bindsym $mod+m exec --no-startup-id psst-gui 
 
     # brightness control
-    bindsym $mod+F9 exec brightnessctl set +5% 
-    bindsym $mod+F8 exec brightnessctl set 5%- 
+    bindsym F6 exec brightnessctl set +5% 
+    bindsym F5 exec brightnessctl set 5%- 
 
     #multimedia
     # Use pactl to adjust volume in PulseAudio.
     set $refresh_i3status killall -SIGUSR1 i3status
-    bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-    bindsym $mod+F1 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-    bindsym $mod+Escape exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+    bindsym F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+    bindsym F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+    bindsym F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
     # Media player controls
-    bindsym $mod+F11 exec playerctl 'play-pause' 
-    bindsym $mod+F12 exec playerctl next
-    bindsym $mod+F10 exec playerctl previous
+    bindsym F11 exec playerctl play3pause
+    bindsym F12 exec playerctl next
+    bindsym F10 exec playerctl previous
 
 
     # Drag floating windows by holding down $mod and left mouse button.
