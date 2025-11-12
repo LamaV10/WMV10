@@ -110,7 +110,7 @@ output HDMI-A-1 bg /home/marcel/Pictures/Wallpaper/Horizontal/jimTT.jpg fill
     bindsym $mod+Shift+M exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
     # Media player controls
-    bindsym $mod+Shift+G exec playerctl play3pause
+    bindsym $mod+Shift+G exec playerctl 'play-pause'
     bindsym $mod+Shift+F exec playerctl next
     bindsym $mod+Shift+S exec playerctl previous
 
