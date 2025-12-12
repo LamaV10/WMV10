@@ -11,6 +11,7 @@
   "modules-center": ["mpris"],
   "modules-right": [
     "network",
+    "temperature",
     "cpu",
     "memory",
     "pulseaudio",
@@ -57,6 +58,13 @@
   "clock#simpleclock": {
     "tooltip": false,
     "format": " {:%H:%M}",
+  },
+
+  "temperature": {
+  	// "thermal-zone": 2,
+  	"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+  	"critical-threshold": 80,
+  	"format": "{temperatureC}°C "
   },
   "clock": {
     "format": " {:L%a %d %b}",

@@ -2,7 +2,7 @@
   min-height: 0;
   min-width: 0;
   font-family: Lexend, "JetBrainsMono NFP";
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -45,8 +45,6 @@ window#waybar {
   color: #f38ba8;
 }
 
-#backlight,
-#battery,
 #network,
 #clock,
 #pulseaudio,
@@ -55,6 +53,7 @@ window#waybar {
 #custom-spotify,
 #custom-notification,
 #cpu,
+#temperature,
 #tray,
 #memory,
 #window,
@@ -83,16 +82,15 @@ window#waybar.empty #window {
   background-color: transparent;
 }
 
-#backlight {
-  color: #94e2d5;
-}
-
-#network {
-  color: #ffffff;
-}
-
 #cpu {
   color: #94e2d5;
+}
+
+#temperature {
+  color: #73FF69;
+}
+#temperature.critical {
+  color: #FF0000;
 }
 
 #memory {
@@ -101,10 +99,6 @@ window#waybar.empty #window {
 
 #clock {
   color: #74c7ec;
-}
-
-#battery{
-  color: #4bff42;
 }
 
 #clock.simpleclock {
