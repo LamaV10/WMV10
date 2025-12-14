@@ -22,8 +22,8 @@
   // "modules-center": ["mpris"],
   "modules-right": [
     "backlight",
-    "battery",
     "battery#BAT1",
+    "battery",
     "network",
     "temperature",
     "cpu",
