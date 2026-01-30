@@ -1,0 +1,1 @@
+gamescope -W 2560 -H 1440 -f -r 144 --force-grab-cursor --expose-wayland -- %command%
