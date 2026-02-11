@@ -1,0 +1,11 @@
+# ~/.zprofile
+
+# Nicht bei SSH-Sessions starten
+if [[ -n "$SSH_CONNECTION" || -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
+  return
+fi
+
+# sway nur lokal auf tty1 starten
+if [[ -z "$WAYLAND_DISPLAY" && -z "$DISPLAY" && "$(tty)" == "/dev/tty1" ]]; then
+  exec sway
+fi
