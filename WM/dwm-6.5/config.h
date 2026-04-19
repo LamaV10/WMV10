@@ -71,7 +71,7 @@ static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"rofi", "-show", "run", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
-static const char *browser[] = {"qutebrowser", NULL};
+static const char *browser[] = {"brave", NULL};
 static const char *spotify[] = {"spotify", NULL};
 static const char *fileman[] = {"pcmanfm", NULL};
 static const char *stk[] = {"supertuxkart", NULL};
@@ -91,7 +91,7 @@ static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute",
 static const char *next[] = {"/usr/bin/playerctl", "next", "toggle", NULL};
 static const char *previous[] = {"/usr/bin/playerctl", "previous", "toggle",
                                  NULL};
-static const char *play3pause[] = {"/usr/bin/playerctl", "play3pause", "toggle",
+static const char *playpause[] = {"/usr/bin/playerctl", "play-pause", "toggle",
                                    NULL};
 
 // brightness control
@@ -119,7 +119,7 @@ static const Key keys[] = {
     {MODKEY, XK_F2, spawn, {.v = upvol}},
     {MODKEY, XK_F12, spawn, {.v = next}},
     {MODKEY, XK_F10, spawn, {.v = previous}},
-    {MODKEY, XK_F11, spawn, {.v = play3pause}},
+    {MODKEY, XK_F11, spawn, {.v = playpause}},
 
     {MODKEY, XK_F9, spawn, {.v = upbright}},
     {MODKEY, XK_F8, spawn, {.v = downbright}},

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+PREFIX=' '
+
+get_load() {
+    # Erste Messung
+    local cpu_last_line
+    read -r cpu_last_line < /proc/stat
+    # shellcheck disable=SC2206
+    local cpu_last=($cpu_last_line)
+
+    sleep 0.1   # etwas länger ist bei niedriger Last stabiler
+
+    # Zweite Messung
+    local cpu_now_line
+    read -r cpu_now_line < /proc/stat
+    # shellcheck disable=SC2206
+    local cpu_now=($cpu_now_line)
+
+    # Summen berechnen (sicherere Methode)
+    local sum_last=0 sum_now=0
+    for ((i=1; i<${#cpu_last[@]}; i++)); do
+        ((sum_last += cpu_last[i]))
+        ((sum_now  += cpu_now[i]))
+    done
+
+    local delta=$((sum_now - sum_last))
+    local idle=$((cpu_now[4] - cpu_last[4]))   # idle ist Feld 4 (0-basiert nach "cpu")
+    local used=$((delta - idle))
+
+    if [[ $delta -le 0 ]]; then
+        echo "$PREFIX 0%"
+        return
+    fi
+
+    # Negative Werte abfangen (kann bei sehr kurzer Zeit passieren)
+    if (( used < 0 )); then
+        used=0
+    fi
+
+    local cpu_usage=$((100 * used / delta))
+
+    echo "$PREFIX ${cpu_usage}%"
+}
+
+get_load
