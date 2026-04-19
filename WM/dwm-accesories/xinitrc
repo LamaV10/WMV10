@@ -6,13 +6,14 @@ xwallpaper --output DisplayPort-2 --stretch /home/marcel/Pictures/Wallpaper/Hori
 xwallpaper --output HDMI-A-0 --stretch /home/marcel/Pictures/Wallpaper/Vertical/CadOld.jpg
 
 #time
-while true; do
-	xsetroot -name "Vol:$(pamixer --get-volume)% | Date:$(date +"%F %R")"
+# while true; do
+	# xsetroot -name "Vol:$(pamixer --get-volume)% | Date:$(date +"%F %R")"
 	#follwing for laptops
 #	xsetroot -name "Bat:$(cat /sys/class/power_supply/BAT1/capacity)% | Vol:$(pamixer --get-volume)% | Brightness:$(brightnessctl g) | Date:$(date +"%F %R")"
-done &
+# done &
 
 #st transparency
 picom &
+dwmbar & 
 
 exec dwm
