@@ -81,7 +81,7 @@ export SUDO_EDITOR=nvim
 plugins=(
     git
     zsh-autosuggestions
-    fzf-zsh-plugin
+    zsh-fzf-history-search
 )
 
 source $ZSH/oh-my-zsh.sh
