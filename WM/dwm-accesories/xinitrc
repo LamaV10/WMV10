@@ -16,4 +16,6 @@ xwallpaper --output HDMI-A-0 --stretch /home/marcel/Pictures/Wallpaper/Vertical/
 picom &
 dwmbar & 
 
+# neoqwertz
+setxkbmap de neo_qwertz
 exec dwm
